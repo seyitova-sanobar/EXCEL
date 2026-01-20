@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kirish — Excel</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h2>Kirish</h2>
+      <p class="notice">Kirish uchun parol kiriting.</p>
+      <input id="pwd" type="password" class="input" placeholder="Parol" />
+      <div class="inline-actions" style="margin-top:12px;">
+        <button class="btn btn-brand" id="login-btn">Kirish</button>
+        <a class="btn" href="https://t.me/your_admin_username" target="_blank" rel="noopener">Admin bilan bog'lanish</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("login-btn");
+    btn.addEventListener("click", () => {
+      const p = document.getElementById("pwd").value.trim();
+      if (p === window.APP_CONFIG.password) {
+        localStorage.setItem("EXCEL_AUTH", "ok");
+        const params = new URLSearchParams(location.search);
+        const next = params.get("next") || "index.html";
+        location.href = next;
+      } else {
+        alert("Parol noto'g'ri!");
+      }
+    });
+  </script>
+</body>
+</html>

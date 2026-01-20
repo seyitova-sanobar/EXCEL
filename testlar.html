@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Testlar — Excel</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/config.js"></script>
+  <script src="assets/auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo" /><span>Excel</span>
+      </a>
+      <div class="header-actions">
+        <a id="tg-btn" class="btn" href="https://t.me/seyitova" target="_blank" rel="noopener">Telegram (Admin)</a>
+        <a class="btn" href="index.html">Bosh sahifa</a>
+      </div>
+    </header>
+
+    <h2 class="section-title">Testlar (PDF)</h2>
+    <div class="inline-actions" style="margin-bottom:12px;">
+      <button class="btn" onclick="renderPDF('#viewer','Testlar/5-sinf-test.pdf')">5-sinf</button>
+      <button class="btn" onclick="renderPDF('#viewer','Testlar/6-sinf-test.pdf')">6-sinf</button>
+      <button class="btn" onclick="renderPDF('#viewer','Testlar/7-sinf-test.pdf')">7-sinf</button>
+    </div>
+
+    <div id="viewer" class="viewer"></div>
+    <a class="btn back" href="index.html">← Orqaga</a>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

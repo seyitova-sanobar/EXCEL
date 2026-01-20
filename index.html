@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Excel — Bosh sahifa</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/config.js"></script>
+  <script src="assets/auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo" />
+        <span>Excel</span>
+      </a>
+      <div class="header-actions">
+        <a id="tg-btn" class="btn" href="https://t.me/seyitova" target="_blank" rel="noopener">Telegram (Admin)</a>
+        <a class="btn" href="users.html">Foydalanuvchilar</a>
+        <button class="btn btn-danger" onclick="logout()">Chiqish</button>
+      </div>
+    </header>
+
+    <h2 class="section-title">Bo'limlar</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Kitoblar</h3>
+        <p>Darsliklar (PDF): 5-sinf, 6-sinf, 7-sinf</p>
+        <a class="btn btn-brand" href="kitoblar.html">O'tish</a>
+      </div>
+      <div class="card">
+        <h3>Slaydlar</h3>
+        <p>1–4 raqamli slaydlar (PPTX)</p>
+        <a class="btn btn-brand" href="slaydlar.html">O'tish</a>
+      </div>
+      <div class="card">
+        <h3>Testlar</h3>
+        <p>Sinflar bo'yicha testlar (PDF)</p>
+        <a class="btn btn-brand" href="testlar.html">O'tish</a>
+      </div>
+      <div class="card">
+        <h3>O'qituvchilar uchun</h3>
+        <p>BSB, CHSB, Ichki monitoring (XLSX)</p>
+        <a class="btn btn-brand" href="oqituvchilar.html">O'tish</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      © <span id="year"></span> Excel sayt. Barcha huquqlar himoyalangan.
+    </footer>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

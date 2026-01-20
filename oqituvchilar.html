@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>O'qituvchilar uchun — Excel</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/config.js"></script>
+  <script src="assets/auth.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="Logo" /><span>Excel</span>
+      </a>
+      <div class="header-actions">
+        <a id="tg-btn" class="btn" href="https://t.me/seyitova" target="_blank" rel="noopener">Telegram (Admin)</a>
+        <a class="btn" href="index.html">Bosh sahifa</a>
+      </div>
+    </header>
+
+    <h2 class="section-title">O'qituvchilar uchun (XLSX)</h2>
+    <p class="notice">Excel fayllar Microsoft Office onlayn ko‘ruvchisi orqali ochiladi.</p>
+
+    <div class="inline-actions" style="margin-bottom:12px;">
+      <button class="btn" onclick="renderOffice('#viewer','Oqituvchilar_uchun/BSB natijalari.xlsx')">BSB natijalari</button>
+      <button class="btn" onclick="renderOffice('#viewer','Oqituvchilar_uchun/CHSB natijalari.xlsx')">CHSB natijalari</button>
+      <button class="btn" onclick="renderOffice('#viewer','Oqituvchilar_uchun/Ichki monitoring natijalari.xlsx')">Ichki monitoring natijalari</button>
+    </div>
+
+    <div id="viewer" class="viewer"></div>
+    <a class="btn back" href="index.html">← Orqaga</a>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
